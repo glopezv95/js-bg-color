@@ -1,5 +1,6 @@
-let elements = Array.from(document.querySelector("div").children);
-console.log(elements)
+let elements = Array.from(document.getElementsByClassName("container")[0].children);
+let logos = Array.from(document.getElementsByClassName("bi"))
+console.log(logos)
 let interval;
 
 function GenerateColor() {
@@ -27,6 +28,10 @@ function ColorChange() {
     if (child == document.querySelector("button")) {
         child.style.borderColor = color
     }});
+
+    logos.forEach(logo => {
+        logo.style.fill = color
+    });
 }
 
 interval = setInterval(ColorChange, 3000)
@@ -41,7 +46,10 @@ function intervalFalse() {
 
         if (child == document.querySelector("button")) {
             child.style.borderColor = "#000"}
-        })};
+        })
+    logos.forEach(logo => {
+        logo.style.fill = "#000"
+    });};
 
     let color = GenerateColor()
     document.body.style.backgroundColor = color;
