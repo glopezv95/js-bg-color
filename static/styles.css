@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root {
+    --font-family: "Roboto", sans-serif;
+    --main-color: #000;
+}
+
+body {
+    margin: 0;
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    font-family: var(--font-family);
+    background-color: var(--main-color);   
+    transition:
+        background-color 3s;
+}
+
+.container {
+    width: 60svw;
+    height: 25svh;
+    display: grid;
+    place-items: center;
+    grid-template-rows: repeat(2, 1fr);
+    border-radius: 10px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3rem;
+    position: relative;
+    color: var(--main-color);
+    transition: 
+        color ease-in-out 2s;
+}
+
+button {
+    width: 30%;
+    height: 50%;
+    font-family: var(--font-family);
+    font-size: 1.8rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: var(--main-color);
+    color: var(--main-color);
+    border: 2px solid;
+    border-color: var(--main-color);
+    transition:
+        height ease-in-out 300ms,
+        width ease-in-out 300ms,
+        color ease-in-out 2s,
+        border ease-in-out 2s,
+        border-color ease-in-out 2s,
+        background-color 2s;
+}
+
+button:hover {
+    cursor: pointer;
+    width: 33%;
+    height: 53%;
+    filter: hue-rotate(180deg)
+}
